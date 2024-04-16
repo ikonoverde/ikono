@@ -352,7 +352,7 @@ return [
                 'currency'               => 'Währung',
                 'customer-service'       => 'Kundendienst',
                 'email'                  => 'Correo Electrónico',
-                'footer-text'            => '© Derechos de autor 2010 - :current_year, Webkul Software (registrada en India). Todos los derechos reservados.',
+                'footer-text'            => '© :current_year ikonoverde.',
                 'locale'                 => 'Sprache',
                 'newsletter-text'        => 'Bereiten Sie sich auf unseren unterhaltsamen Newsletter vor!',
                 'order-return'           => 'Bestellung und Rückgabe',

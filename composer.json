@@ -118,7 +118,8 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "shetabit/visitor"
+                "shetabit/visitor",
+                "laravel/telescope"
             ]
         }
     },

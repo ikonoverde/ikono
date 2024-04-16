@@ -51,39 +51,39 @@
         {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.search_bar.before') !!}
 
         <!-- Search Bar Container -->
-        <div class="relative w-full">
-            <form
-                action="{{ route('shop.search.index') }}"
-                class="flex items-center max-w-[445px]"
-                role="search"
-            >
-                <label
-                    for="organic-search"
-                    class="sr-only"
-                >
-                    @lang('shop::app.components.layouts.header.search')
-                </label>
+{{--        <div class="relative w-full">--}}
+{{--            <form--}}
+{{--                action="{{ route('shop.search.index') }}"--}}
+{{--                class="flex items-center max-w-[445px]"--}}
+{{--                role="search"--}}
+{{--            >--}}
+{{--                <label--}}
+{{--                    for="organic-search"--}}
+{{--                    class="sr-only"--}}
+{{--                >--}}
+{{--                    @lang('shop::app.components.layouts.header.search')--}}
+{{--                </label>--}}
 
-                <div class="icon-search flex items-center  absolute ltr:left-3 rtl:right-3 top-2.5 text-xl pointer-events-none"></div>
+{{--                <div class="icon-search flex items-center  absolute ltr:left-3 rtl:right-3 top-2.5 text-xl pointer-events-none"></div>--}}
 
-                <input
-                    type="text"
-                    name="query"
-                    value="{{ request('query') }}"
-                    class="block w-full px-11 py-3 bg-[#F5F5F5] rounded-lg text-gray-900 text-xs font-medium transition-all border border-transparent hover:border-gray-400 focus:border-gray-400"
-                    placeholder="@lang('shop::app.components.layouts.header.search-text')"
-                    aria-label="@lang('shop::app.components.layouts.header.search-text')"
-                    aria-required="true"
-                    required
-                >
+{{--                <input--}}
+{{--                    type="text"--}}
+{{--                    name="query"--}}
+{{--                    value="{{ request('query') }}"--}}
+{{--                    class="block w-full px-11 py-3 bg-[#F5F5F5] rounded-lg text-gray-900 text-xs font-medium transition-all border border-transparent hover:border-gray-400 focus:border-gray-400"--}}
+{{--                    placeholder="@lang('shop::app.components.layouts.header.search-text')"--}}
+{{--                    aria-label="@lang('shop::app.components.layouts.header.search-text')"--}}
+{{--                    aria-required="true"--}}
+{{--                    required--}}
+{{--                >--}}
 
-                <button type="submit" class="hidden" aria-label="Submit"></button>
+{{--                <button type="submit" class="hidden" aria-label="Submit"></button>--}}
 
-                @if (core()->getConfigData('general.content.shop.image_search'))
-                    @include('shop::search.images.index')
-                @endif
-            </form>
-        </div>
+{{--                @if (core()->getConfigData('general.content.shop.image_search'))--}}
+{{--                    @include('shop::search.images.index')--}}
+{{--                @endif--}}
+{{--            </form>--}}
+{{--        </div>--}}
 
         {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.search_bar.after') !!}
 

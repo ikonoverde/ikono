@@ -82,7 +82,9 @@
                                         }
                                     }
                                 })
-                                .catch(error => window.location.href = "{{ route('shop.checkout.cart.index') }}");
+                                .catch(error => {
+                                    window.location.href = "{{ route('shop.checkout.cart.index') }}"
+                                });
                             },
 
                             onError: (error) => {

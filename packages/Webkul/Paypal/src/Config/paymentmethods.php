@@ -5,7 +5,7 @@ return [
         'code'             => 'paypal_smart_button',
         'title'            => 'PayPal Smart Button',
         'description'      => 'PayPal',
-        'client_id'        => 'sb',
+        'client_id'        => 'AY0t5nnNfUaRQhOa3NZgOlhkRHqWaUiCQCs_rTkBiNqnSchuBWmHOSGF803aKiA3TKN1YhCJzSORhbQn',
         'class'            => 'Webkul\Paypal\Payment\SmartButton',
         'sandbox'          => true,
         'active'           => true,
@@ -19,7 +19,7 @@ return [
         'class'            => 'Webkul\Paypal\Payment\Standard',
         'sandbox'          => true,
         'active'           => true,
-        'business_account' => 'test@webkul.com',
+        'business_account' => 'manuel@ikonoverde.com',
         'sort'             => 3,
     ],
 ];

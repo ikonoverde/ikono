@@ -573,7 +573,12 @@ class Core
             ? $this->getAllCurrencies()->where('code', $currencyCode)->first()
             : $this->getCurrentCurrency();
 
-        $formatter = new \NumberFormatter(app()->getLocale(), \NumberFormatter::CURRENCY);
+        $locale = match ($currency->code) {
+            'MXN'   => 'es_MX',
+            default => app()->getLocale(),
+        };
+
+        $formatter = new \NumberFormatter($locale, \NumberFormatter::CURRENCY);
 
         $formatter->setAttribute(\NumberFormatter::FRACTION_DIGITS, $currency->decimal ?? 2);
 

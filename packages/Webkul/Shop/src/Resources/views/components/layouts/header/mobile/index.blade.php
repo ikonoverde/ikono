@@ -147,7 +147,7 @@
                     height="29"
                 >
             </a>
-            
+
             {!! view_render_event('bagisto.shop.components.layouts.header.mobile.logo.after') !!}
         </div>
 
@@ -287,31 +287,31 @@
 
     <!-- Serach Catalog Form -->
     <form action="{{ route('shop.search.index') }}" class="flex items-center w-full">
-        <label 
-            for="organic-search" 
+        <label
+            for="organic-search"
             class="sr-only"
         >
             @lang('shop::app.components.layouts.header.search')
         </label>
 
-        <div class="relative w-full">
-            <div
-                class="icon-search flex items-center absolute ltr:left-3 rtl:right-3 top-3 text-2xl pointer-events-none">
-            </div>
+{{--        <div class="relative w-full">--}}
+{{--            <div--}}
+{{--                class="icon-search flex items-center absolute ltr:left-3 rtl:right-3 top-3 text-2xl pointer-events-none">--}}
+{{--            </div>--}}
 
-            <input
-                type="text"
-                class="block w-full px-11 py-3.5 border border-['#E3E3E3'] rounded-xl text-gray-900 text-xs font-medium"
-                name="query"
-                value="{{ request('query') }}"
-                placeholder="@lang('shop::app.components.layouts.header.search-text')"
-                required
-            >
+{{--            <input--}}
+{{--                type="text"--}}
+{{--                class="block w-full px-11 py-3.5 border border-['#E3E3E3'] rounded-xl text-gray-900 text-xs font-medium"--}}
+{{--                name="query"--}}
+{{--                value="{{ request('query') }}"--}}
+{{--                placeholder="@lang('shop::app.components.layouts.header.search-text')"--}}
+{{--                required--}}
+{{--            >--}}
 
-            @if (core()->getConfigData('general.content.shop.image_search'))
-                @include('shop::search.images.index')
-            @endif
-        </div>
+{{--            @if (core()->getConfigData('general.content.shop.image_search'))--}}
+{{--                @include('shop::search.images.index')--}}
+{{--            @endif--}}
+{{--        </div>--}}
     </form>
 
     {!! view_render_event('bagisto.shop.components.layouts.header.mobile.search.after') !!}
