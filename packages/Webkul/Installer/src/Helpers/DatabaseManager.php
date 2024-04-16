@@ -15,9 +15,9 @@ class DatabaseManager
      */
     public function isInstalled()
     {
-        if (! file_exists(base_path('.env'))) {
-            return false;
-        }
+//        if (! file_exists(base_path('.env'))) {
+//            return false;
+//        }
 
         try {
             DB::connection()->getPDO();
