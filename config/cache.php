@@ -34,6 +34,15 @@ return [
             'driver' => 'apc',
         ],
 
+        'dynamodb' => [
+            'driver'   => 'dynamodb',
+            'key'      => null,
+            'secret'   => null,
+            'region'   => env('AWS_DEFAULT_REGION', 'us-east-1'),
+            'table'    => env('DYNAMODB_CACHE_TABLE', 'vapor_cache'),
+            'endpoint' => env('DYNAMODB_ENDPOINT'),
+        ],
+
         'array' => [
             'driver' => 'array',
         ],
