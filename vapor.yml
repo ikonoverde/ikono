@@ -9,3 +9,4 @@ environments:
             - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
             - 'php artisan event:cache'
         database: ikono
+        storage: ikono-bagisto
