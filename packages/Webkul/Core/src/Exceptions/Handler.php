@@ -6,6 +6,7 @@ use App\Exceptions\Handler as BaseHandler;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use Sentry\Laravel\Integration;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 
@@ -101,5 +102,11 @@ class Handler extends BaseHandler
         $this->renderable(function (ValidationException $exception, Request $request) {
             return parent::convertValidationExceptionToResponse($exception, $request);
         });
+    }
+
+    protected function reportThrowable(Throwable $e): void
+    {
+        Integration::captureUnhandledException($e);
+        parent::reportThrowable($e);
     }
 }

@@ -24,8 +24,10 @@ package-lock.json
 /lang/vendor
 /storage/*.key
 /storage/dcc-data/
+/storage/framework/sessions
 /vendor
 yarn.lock
 yarn-error.log
 .env.prod
 .env.production
+.vapor/
