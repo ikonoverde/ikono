@@ -6,6 +6,7 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManager;
+use Sentry\Laravel\Integration;
 use Webkul\Core\Eloquent\Repository;
 use Webkul\Theme\Contracts\ThemeCustomization;
 
@@ -81,15 +82,26 @@ class ThemeCustomizationRepository extends Repository
 
                     $path = 'theme/'.$theme->id.'/'.Str::random(40).'.webp';
 
-                    Storage::put($path, $manager->make($image['image'])->encode('webp'), 'public');
+                    Integration::captureUnhandledException(new \Exception('Path: '.$path));
+
+                    $uploaded = Storage::put($path, $manager->make($image['image'])->encode('webp'), 'public');
+
+                    if ($uploaded) {
+                        Integration::captureUnhandledException(new \Exception('Image uploaded'));
+                    } else {
+                        Integration::captureUnhandledException(new \Exception('Image not uploaded'));
+                    }
                 } catch (\Exception $e) {
+                    Integration::captureUnhandledException($e);
                     session()->flash('error', $e->getMessage());
 
                     return redirect()->back();
                 }
 
                 if (($data['type'] ?? '') == 'static_content') {
-                    return Storage::url($path);
+                    $url = Storage::url($path);
+                    Integration::captureUnhandledException(new \Exception('URL: '.$url));
+                    return $url;
                 }
 
                 $options['images'][] = [
