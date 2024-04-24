@@ -15,9 +15,7 @@ class ProductImagesMiddleware
         if (get_class($response) === JsonResponse::class) {
             $data = $response->getData(true);
             foreach ($data['records'] as $i => $record) {
-                if (isset($record['base_image'])) {
-                    $data['records'][$i]['base_image'] = Storage::url($record['base_image']);
-                }
+                $data['records'][$i]['base_image'] = isset($record['base_image']) ? Storage::url($record['base_image']) : null;
             }
             $response->setData($data);
         }

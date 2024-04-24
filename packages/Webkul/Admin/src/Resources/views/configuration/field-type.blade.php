@@ -165,7 +165,7 @@
                 >
                     @if (isset($field['repository']))
                         @foreach ($value as $key => $option)
-                            <option 
+                            <option
                                 value="{{ $key }}"
                                 {{ in_array($key, explode(',', $selectedOption)) ? 'selected' : ''}}
                             >
@@ -174,7 +174,7 @@
                         @endforeach
                     @else
                         @foreach ($field['options'] as $option)
-                            <option 
+                            <option
                                 value="{{ $value = $option['value'] ?? 0 }}"
                                 {{ in_array($value, explode(',', $selectedOption)) ? 'selected' : ''}}
                             >
@@ -195,7 +195,7 @@
             <input type="hidden" name="{{ $name }}" value="0" />
 
             <label class="relative inline-flex items-center cursor-pointer">
-                <input  
+                <input
                     type="checkbox"
                     name="{{ $name }}"
                     value="1"
@@ -210,8 +210,8 @@
         @elseif ($field['type'] == 'image')
 
             @php
-                $src = Storage::url(core()->getConfigData($nameKey, $currentChannel->code, $currentLocale->code));
                 $result = core()->getConfigData($nameKey, $currentChannel->code, $currentLocale->code);
+                $src = $result ? Storage::url($result) : null;
             @endphp
 
             <div class="flex justify-center items-center">
