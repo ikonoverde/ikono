@@ -159,7 +159,7 @@
                             <template v-if="record.base_image">
                                 <img
                                     class="min-h-[65px] min-w-[65px] max-h-[65px] max-w-[65px] rounded"
-                                    :src=`{{ Storage::url('') }}${record.base_image}`
+                                    :src=`${record.base_image}`
                                 />
 
                                 <span
@@ -244,7 +244,7 @@
                             <a :href=`{{ route('admin.catalog.products.copy', '') }}/${record.product_id}`>
                                 <span class="icon-copy text-2xl ltr:ml-1 rtl:mr-1 p-1.5 rounded-md cursor-pointer transition-all hover:bg-gray-200 dark:hover:bg-gray-800"></span>
                             </a>
-                            
+
                             <a :href=`{{ route('admin.catalog.products.edit', '') }}/${record.product_id}`>
                                 <span class="icon-sort-right text-2xl ltr:ml-1 rtl:mr-1 p-1.5 rounded-md cursor-pointer transition-all hover:bg-gray-200 dark:hover:bg-gray-800"></span>
                             </a>

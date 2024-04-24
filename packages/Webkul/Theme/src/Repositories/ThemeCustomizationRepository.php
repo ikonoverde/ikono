@@ -79,18 +79,9 @@ class ThemeCustomizationRepository extends Repository
             } elseif ($image['image'] instanceof UploadedFile) {
                 try {
                     $manager = new ImageManager();
-
                     $path = 'theme/'.$theme->id.'/'.Str::random(40).'.webp';
+                    Storage::put($path, $manager->make($image['image'])->encode('webp'), 'public');
 
-                    Integration::captureUnhandledException(new \Exception('Path: '.$path));
-
-                    $uploaded = Storage::put($path, $manager->make($image['image'])->encode('webp'), 'public');
-
-                    if ($uploaded) {
-                        Integration::captureUnhandledException(new \Exception('Image uploaded'));
-                    } else {
-                        Integration::captureUnhandledException(new \Exception('Image not uploaded'));
-                    }
                 } catch (\Exception $e) {
                     Integration::captureUnhandledException($e);
                     session()->flash('error', $e->getMessage());
@@ -99,9 +90,7 @@ class ThemeCustomizationRepository extends Repository
                 }
 
                 if (($data['type'] ?? '') == 'static_content') {
-                    $url = Storage::url($path);
-                    Integration::captureUnhandledException(new \Exception('URL: '.$url));
-                    return $url;
+                    return Storage::url($path);
                 }
 
                 $options['images'][] = [

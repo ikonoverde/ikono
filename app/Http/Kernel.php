@@ -64,4 +64,8 @@ class Kernel extends HttpKernel
         'throttle'      => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'cacheResponse' => \Webkul\Shop\Http\Middleware\CacheResponse::class,
     ];
+
+    protected $routeMiddleware = [
+        'product.images' => \App\Http\Middleware\S3\ProductImagesMiddleware::class,
+    ];
 }

@@ -26,8 +26,8 @@ class FilePermissions extends Command
     public function handle(): void
     {
         // Get filesystems configuration
-        $filesystems = config('cache');
+        $session = config('session');
 
-        $this->info(json_encode($filesystems, JSON_PRETTY_PRINT));
+        $this->info(json_encode($session, JSON_PRETTY_PRINT));
     }
 }
