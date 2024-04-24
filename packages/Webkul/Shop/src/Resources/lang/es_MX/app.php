@@ -905,7 +905,7 @@ return [
             'qty'               => 'Cantidad',
             'shipping'          => 'Envío',
             'shipping-address'  => 'Dirección de envío',
-            'shipping-handling' => 'Manejo de envío',
+            'shipping-handling' => 'Envío',
             'sku'               => 'SKU',
             'subtotal'          => 'Subtotal',
             'tax'               => 'Impuesto',
