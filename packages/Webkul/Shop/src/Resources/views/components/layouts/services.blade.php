@@ -11,11 +11,14 @@
         'type'       => 'services_content',
         'status'     => 1,
         'channel_id' => core()->getCurrentChannel()->id,
-    ]); 
+    ]);
 @endphp
 
 <!-- Features -->
 @if ($customization)
+    @php
+        dd($customization)
+    @endphp
     <div class="container mt-20 max-lg:px-8 max-sm:mt-8">
         <div class="flex gap-6 justify-center max-lg:flex-wrap">
             @foreach ($customization->options['services'] as $service)
