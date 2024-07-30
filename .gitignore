@@ -11,7 +11,8 @@
 /docker-compose-collection
 Homestead.json
 Homestead.yaml
-/ignorables/*
+/docker/*
+/docker/
 /node_modules
 npm-debug.log
 package-lock.json

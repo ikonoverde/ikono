@@ -105,6 +105,10 @@ class OnepageController extends Controller
             }
         }
 
+        if (is_array($order)) {
+            $order = (object) $order;
+        }
+
         return view('shop::checkout.success', compact('order'));
     }
 

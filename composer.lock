@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abe30a6956955d8bee701eff6c66701d",
+    "content-hash": "d1dcfa0adbdbb2bbfd1a30d5d783dfb4",
     "packages": [
         {
             "name": "astrotomic/laravel-translatable",
@@ -8463,6 +8463,65 @@
             "time": "2023-12-25T11:46:58+00:00"
         },
         {
+            "name": "stripe/stripe-php",
+            "version": "v14.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "7038876e791ed0cd7326d2497515a8e37734b3e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/7038876e791ed0cd7326d2497515a8e37734b3e8",
+                "reference": "7038876e791ed0cd7326d2497515a8e37734b3e8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.5.0",
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^5.7 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v14.8.0"
+            },
+            "time": "2024-05-23T20:23:58+00:00"
+        },
+        {
             "name": "symfony/console",
             "version": "v6.4.2",
             "source": {
@@ -11267,6 +11326,54 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wontonee/stripe",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wontone18/Bagisto-Stripe-Payment-Gateway.git",
+                "reference": "d2a0478dded361f4c7c0765df702cec87984a633"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wontone18/Bagisto-Stripe-Payment-Gateway/zipball/d2a0478dded361f4c7c0765df702cec87984a633",
+                "reference": "d2a0478dded361f4c7c0765df702cec87984a633",
+                "shasum": ""
+            },
+            "require": {
+                "stripe/stripe-php": "^14.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wontonee\\Stripe\\Providers\\StripeServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wontonee\\Stripe\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saju G",
+                    "email": "saju.g@wontonetech.com"
+                }
+            ],
+            "description": "Laravel bagisto stripe payment gateway from wontonee",
+            "support": {
+                "issues": "https://github.com/wontone18/Bagisto-Stripe-Payment-Gateway/issues",
+                "source": "https://github.com/wontone18/Bagisto-Stripe-Payment-Gateway/tree/2.0"
+            },
+            "time": "2024-04-24T11:39:55+00:00"
         }
     ],
     "packages-dev": [
@@ -14605,5 +14712,5 @@
         "ext-tokenizer": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

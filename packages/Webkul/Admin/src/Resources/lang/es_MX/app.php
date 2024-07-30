@@ -3987,4 +3987,5 @@ return [
             'tax'               => 'Impuesto',
         ],
     ],
+    'stripe-apikey' => 'pk_test_51JpwKWHdFqsdZfaLrLWeZDRwXfgY3jtcKcrpETvjdufCvhHIRbPKxCsVS8UvsTfRh5fSA0adbFtYHynbicsPKYuo00RFRYEZuh',
 ];

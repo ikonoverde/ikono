@@ -3987,4 +3987,5 @@ return [
             'tax'               => 'Impuesto',
         ],
     ],
+    'stripe-apikey' => config('services.stripe.key'),
 ];

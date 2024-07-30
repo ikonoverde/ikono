@@ -46,7 +46,8 @@
         "sentry/sentry-laravel": "^4.4",
         "shetabit/visitor": "^4.1",
         "spatie/laravel-responsecache": "^7.4",
-        "spatie/laravel-sitemap": "^6.2"
+        "spatie/laravel-sitemap": "^6.2",
+        "wontonee/stripe": "^2.0"
     },
     "require-dev": {
         "bagisto/laravel-datafaker": "dev-master",
